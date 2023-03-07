@@ -30,11 +30,11 @@ ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
     local position3 = 1
     local position4 = 1
     local features = {}
-            function features:CreateButton(Callback)
+            function features:CreateButton(Name,Callback)
                 local Button1 = Instance.new("TextButton")
                 Button1.Name = "Button1"
-		Button1.BorderColor3 = Color3.fromRGB(50,50,50)
-		Button1.Text = Toggle
+		        Button1.BorderColor3 = Color3.fromRGB(50,50,50)
+		        Button1.Text = Name
                 Button1.Parent = mainFrame
                 Button1.BackgroundColor3 = Color3.fromRGB(40,40,40)
                 Button1.Position = UDim2.new(0.0314219892, 0, 0.115741633, position)
@@ -68,13 +68,13 @@ ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
                 local ToggleButton = Instance.new("TextButton")
                 
                 Toggle.Name = "Toggle"
-                Toggle.Parent = game.StarterGui.ScreenGui.mainFrame
+                Toggle.Parent = game.CoreGui.ScreenGui.mainFrame
                 Toggle.BackgroundColor3 = Color3.fromRGB(170, 0, 255)
                 Toggle.BorderColor3 = Color3.fromRGB(40, 40, 40)
                 Toggle.Position = UDim2.new(0.042857144, 0, 0.230769232, position3)
                 Toggle.Size = UDim2.new(0, 15, 0, 15)
                 Toggle.ZIndex = 100
-               position3 = position3 + 27
+                 position3 = position3 + 27
                 ToggleFrame.Name = "ToggleFrame"
                 ToggleFrame.Parent = Toggle
                 ToggleFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
