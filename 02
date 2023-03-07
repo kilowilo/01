@@ -1,0 +1,156 @@
+
+local library = {}
+
+function library:CreateUI(name)
+
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+    local mainFrame = Instance.new("Frame")
+    mainFrame.Name = "mainFrame"
+    mainFrame.Parent = ScreenGui
+    mainFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+    mainFrame.Position = UDim2.new(0.415465266, 0, 0.200949356, 0)
+    mainFrame.Size = UDim2.new(0, 280, 0, 390)
+
+    local uiText = Instance.new("TextLabel")
+    uiText.Name = "uiText"
+    uiText.Parent = mainFrame
+    uiText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    uiText.BackgroundTransparency = 1.000
+    uiText.Position = UDim2.new(-0.00275230408, 0, -0.00161473453, 0)
+    uiText.Size = UDim2.new(0, 129, 0, 21)
+    uiText.Font = Enum.Font.RobotoMono
+    uiText.Text = "silly goober hub"
+    uiText.TextColor3 = Color3.fromRGB(255, 255, 255)
+    uiText.TextSize = 14.000
+    local position = 1
+    local position2 = 1
+    local position3 = 1
+    local position4 = 1
+    local features = {}
+            function features:CreateButton(Name,Callback)
+                local Button1 = Instance.new("TextButton")
+                Button1.Name = "Button1"
+		        Button1.BorderColor3 = Color3.fromRGB(50,50,50)
+		        Button1.Text = Name
+                Button1.Parent = mainFrame
+                Button1.BackgroundColor3 = Color3.fromRGB(40,40,40)
+                Button1.Position = UDim2.new(0.0314219892, 0, 0.115741633, position)
+                Button1.Size = UDim2.new(0, 128, 0, 20)
+                Button1.Font = Enum.Font.RobotoMono
+                Button1.TextColor3 = Color3.fromRGB(255, 255, 255)
+                Button1.TextSize = 14.000
+                position = position + 27
+                Button1.MouseButton1Down:Connect(Callback)
+              end
+
+  
+            function features:CreateButton2(Name,Callback)
+                local Button2 = Instance.new("TextButton")
+                Button2.Name = "Button2"
+		        Button2.BorderColor3 = Color3.fromRGB(50,50,50)
+		        Button2.Text = Name
+                Button2.Parent = mainFrame
+                Button2.BackgroundColor3 = Color3.fromRGB(40,40,40)
+                Button2.Position = UDim2.new(0.512745857, 0, 0.115741633, position2)
+                Button2.Size = UDim2.new(0, 128, 0, 20)
+                Button2.Font = Enum.Font.RobotoMono
+                Button2.TextColor3 = Color3.fromRGB(255, 255, 255)
+                Button2.TextSize = 14.000   
+                position2 = position2 + 27
+                Button2.MouseButton1Down:Connect(Callback)
+             end
+             function features:CreateToggle(Name,Callback)
+                local Toggle = Instance.new("Frame")
+                local ToggleFrame = Instance.new("Frame")
+                local ToggleButton = Instance.new("TextButton")
+                
+                Toggle.Name = "Toggle"
+                Toggle.Parent = game.StarterGui.ScreenGui.mainFrame
+                Toggle.BackgroundColor3 = Color3.fromRGB(170, 0, 255)
+                Toggle.BorderColor3 = Color3.fromRGB(40, 40, 40)
+                Toggle.Position = UDim2.new(0.042857144, 0, 0.230769232, position3)
+                Toggle.Size = UDim2.new(0, 15, 0, 15)
+                Toggle.ZIndex = 100
+               position3 = position3 + 27
+                ToggleFrame.Name = "ToggleFrame"
+                ToggleFrame.Parent = Toggle
+                ToggleFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+                ToggleFrame.BorderColor3 = Color3.fromRGB(50, 50, 50)
+                ToggleFrame.Size = UDim2.new(0, 16, 0, 16)
+                ToggleFrame.ZIndex = 99
+
+                ToggleButton.Name = "ToggleButton"
+                ToggleButton.Parent = Toggle
+                ToggleButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+                ToggleButton.BackgroundTransparency = 1.000
+                ToggleButton.Size = UDim2.new(0, 16, 0, 16)
+                ToggleButton.Font = Enum.Font.SourceSans
+                ToggleButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+                ToggleButton.TextSize = 14.000
+                ToggleButton.TextTransparency = 1.000
+                ToggleButton.MouseButton1Down:Connect(Callback)
+             end
+
+    local Main = Instance.new("TextLabel")
+    Main.Name = "Main"
+    Main.Parent = mainFrame
+    Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    Main.BackgroundTransparency = 1.000
+    Main.Position = UDim2.new(-0.00275224959, 0, 0.0215190016, 0)
+    Main.Size = UDim2.new(0, 42, 0, 37)
+    Main.Font = Enum.Font.RobotoMono
+    Main.Text = "Main"
+    Main.TextColor3 = Color3.fromRGB(255, 255, 255)
+    Main.TextSize = 14.000
+    Main.TextWrapped = true
+
+    local MainTextButton = Instance.new("TextButton")
+    MainTextButton.Name = "MainTextButton"
+    MainTextButton.Parent = Main
+    MainTextButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+    MainTextButton.BackgroundTransparency = 1.000
+    MainTextButton.Position = UDim2.new(0, 0, 0.323725522, 0)
+    MainTextButton.Size = UDim2.new(0, 40, 0, 18)
+    MainTextButton.Font = Enum.Font.SourceSans
+    MainTextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+    MainTextButton.TextSize = 14.000
+    MainTextButton.TextTransparency = 1.000
+
+    local Visuals = Instance.new("TextLabel")
+    Visuals.Name = "Visuals"
+    Visuals.Parent = mainFrame
+    Visuals.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    Visuals.BackgroundTransparency = 1.000
+    Visuals.Position = UDim2.new(0.0793906078, 0, 0.0215190016, 0)
+    Visuals.Size = UDim2.new(0, 85, 0, 37)
+    Visuals.Font = Enum.Font.RobotoMono
+    Visuals.Text = "Visuals"
+    Visuals.TextColor3 = Color3.fromRGB(150, 150, 150)
+    Visuals.TextSize = 14.000
+    Visuals.TextWrapped = true
+
+    local TextButton = Instance.new("TextButton")
+    TextButton.Parent = Visuals
+    TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    TextButton.BackgroundTransparency = 1.000
+    TextButton.Position = UDim2.new(0.223529413, 0, 0.323725522, 0)
+    TextButton.Size = UDim2.new(0, 47, 0, 16)
+    TextButton.Font = Enum.Font.SourceSans
+    TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+    TextButton.TextSize = 14.000
+    TextButton.TextTransparency = 1.000
+    local Line = Instance.new("Frame")
+    Line.Name = "Line"
+    Line.Parent = ScreenGui
+    Line.BackgroundColor3 = Color3.fromRGB(170, 0, 255)
+    Line.Position = UDim2.new(0.415465266, 0, 0.199367091, 0)
+    Line.Size = UDim2.new(0, 280, 0, 1)
+    Line.ZIndex = 100
+return features
+end
+
+return library 
+
