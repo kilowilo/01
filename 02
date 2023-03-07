@@ -68,7 +68,7 @@ ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
                 local ToggleButton = Instance.new("TextButton")
                 
                 Toggle.Name = "Toggle"
-                Toggle.Parent = game.CoreGui.ScreenGui.mainFrame
+                Toggle.Parent = game:GetService("CoreGui").ScreenGui
                 Toggle.BackgroundColor3 = Color3.fromRGB(170, 0, 255)
                 Toggle.BorderColor3 = Color3.fromRGB(40, 40, 40)
                 Toggle.Position = UDim2.new(0.042857144, 0, 0.230769232, position3)
