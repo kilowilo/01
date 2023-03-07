@@ -30,11 +30,11 @@ ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
     local position3 = 1
     local position4 = 1
     local features = {}
-            function features:CreateButton(Name,Callback)
+            function features:CreateButton(Callback)
                 local Button1 = Instance.new("TextButton")
                 Button1.Name = "Button1"
-		        Button1.BorderColor3 = Color3.fromRGB(50,50,50)
-		        Button1.Text = Name
+		Button1.BorderColor3 = Color3.fromRGB(50,50,50)
+		Button1.Text = Toggle
                 Button1.Parent = mainFrame
                 Button1.BackgroundColor3 = Color3.fromRGB(40,40,40)
                 Button1.Position = UDim2.new(0.0314219892, 0, 0.115741633, position)
